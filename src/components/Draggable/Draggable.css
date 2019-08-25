@@ -1,0 +1,9 @@
+.isDraggable {
+    cursor: grab;
+}
+
+.draggingOn {
+    opacity: 0.2;
+    cursor: grabbing;
+    user-select: none;
+}

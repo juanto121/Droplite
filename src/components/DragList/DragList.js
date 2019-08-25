@@ -1,20 +1,54 @@
-import React from 'react'
-import Draggable from './Draggable'
+import React, { useState } from 'react'
+import Draggable from '../Draggable/Draggable'
 
 const DragList = (props) => {
 
-  const dragOverHandler = (event) => { }
+  const LIST_CONTAINER_ID = 'DragListContainer'
+  const [currentDraggableId, setCurrentDraggableId] = useState(null)
+  const [currentDragOver, setCurrentDragOver] = useState(null)
 
-  const onDragEndHandler = (event) => { }
+  const dragOverHandler = (event) => {
+    event.preventDefault()
+    const target = event.target
+    if (target.id !== currentDraggableId &&
+      target.id !== LIST_CONTAINER_ID
+    )
+    {
+      if(currentDragOver && currentDragOver.classList)
+        currentDragOver.classList.remove('draggedOver')
+      target.classList.add('draggedOver')
+      setCurrentDragOver(target)
+    }
+  }
 
-  const updateCurrentDraggableHandler = (draggable) => { }
+  const onDragEndHandler = (event) => {
+    const target = event.target
+    if(currentDragOver) {
+      props.onNewOrder(target.id, currentDragOver.id)
+      if(currentDragOver.classList)
+        currentDragOver.classList.remove('draggedOver')
+    }
+    setCurrentDragOver(null)
+    setCurrentDraggableId(null)
+  }
+
+  const updateCurrentDraggableHandler = (draggable) => {
+    setCurrentDraggableId(draggable)
+  }
+
+
 
   return (
-    <div onDragOver={dragOverHandler}>
+    <div id={LIST_CONTAINER_ID} onDragOver={dragOverHandler}>
       {
-        props.children.map((item) => {
+        props.children.map((item, index) => {
           return (
-            <Draggable>
+            <Draggable
+              id={item.key}
+              key={item.key}
+              updateCurrentDraggableHandler={updateCurrentDraggableHandler}
+              onDragEndHandler={onDragEndHandler}
+            >
               {item}
             </Draggable>
           )
