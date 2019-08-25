@@ -17,16 +17,28 @@ const Draggable = (props) => {
     props.onDragEndHandler(event)
   }
 
-  const modified = React.cloneElement(props.children, {
-    makeDraggable: {
-      style: { backgroundColor: 'red' },
+  let modified = null
+  const makeDraggable = {
       onDragStart: dragStart,
       onDragEnd: dragEnd,
       draggable: true,
-      className: [props.children.props.className, 'isDraggable'].join(" "),
-      id: props.id
+      id: props.identificator
+  }
+
+  if(React.isValidElement(props.children)) {
+    // Only string elements are DOM nodes. The remaining are functions, classes or Fragments
+    if(typeof(props.children.type) === 'string')
+      modified = React.cloneElement(props.children, {
+        ...makeDraggable,
+        className: [props.children.props.className, 'isDraggable'].join(" "),
+      })
+    else {
+      modified = React.cloneElement(props.children, {
+        makeDraggable,
+        className: [props.children.props.className, 'isDraggable'].join(" ")
+      })
     }
-  })
+  }
 
   return modified
 }

@@ -41,10 +41,10 @@ const DragList = (props) => {
   return (
     <div id={LIST_CONTAINER_ID} onDragOver={dragOverHandler}>
       {
-        props.children.map((item, index) => {
+        props.children.map((item) => {
           return (
             <Draggable
-              id={item.key}
+              identificator={item.key}
               key={item.key}
               updateCurrentDraggableHandler={updateCurrentDraggableHandler}
               onDragEndHandler={onDragEndHandler}
