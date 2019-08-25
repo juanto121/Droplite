@@ -1,1 +1,1 @@
-export {default as Draglist} from './DragList'
+export {default as DragList} from './DragList'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const DragList = (props) => {
-  return null
+  return <div>One Draglist</div>
 }
 
 export default DragList
