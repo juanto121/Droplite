@@ -1,2 +1,8 @@
-.idea/
-node_modules/
+node_modules
+.idea
+*.log
+temp
+.eslintcache
+dist
+.docz
+*.psd

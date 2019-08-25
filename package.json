@@ -1,0 +1,38 @@
+{
+  "name": "droplite",
+  "version": "1.0.0",
+  "description": "Fat free  react drag and drop lists",
+  "main": "dist/droplite.js",
+  "dependencies": {
+    "react": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanto121/Droplite.git"
+  },
+  "keywords": [
+    "Drag",
+    "Drop",
+    "react",
+    "list",
+    "light"
+  ],
+  "author": "Juan Torres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juanto121/Droplite/issues"
+  },
+  "homepage": "https://github.com/juanto121/Droplite#readme"
+}
