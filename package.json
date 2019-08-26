@@ -1,12 +1,14 @@
 {
-  "name": "react-droplite",
-  "version": "0.0.8",
+  "name": "droplite",
+  "version": "0.0.1",
   "description": "Fat free  react drag and drop lists",
-  "main": "dist/react-droplite.js",
-  "dependencies": {
-    "node-sass": "^4.12.0",
+  "main": "dist/droplite.js",
+  "peerDependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -19,7 +21,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
+    "build": "webpack --mode development",
     "storybook": "start-storybook -p 9001",
     "build-storybook": "build-storybook -c .storybook -o ./docs/"
   },

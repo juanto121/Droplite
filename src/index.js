@@ -1,1 +1,2 @@
-export * from './components'
+import { DragList } from './components'
+export default DragList
