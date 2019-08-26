@@ -1,3 +1,3 @@
-import Draggable from './Draggable'
+import Draggable from './Draggable.js'
 
 export default Draggable

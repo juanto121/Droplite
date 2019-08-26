@@ -1,9 +1,10 @@
 {
   "name": "react-droplite",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "Fat free  react drag and drop lists",
-  "main": "dist/droplite.js",
+  "main": "dist/react-droplite.js",
   "dependencies": {
+    "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },

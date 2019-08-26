@@ -39,7 +39,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '',
-    filename: 'droplite.js',
-    libraryTarget: 'var',
+    filename: 'react-droplite.js',
+    libraryTarget: 'umd',
   },
 };
