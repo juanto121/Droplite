@@ -40,6 +40,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '',
     filename: 'droplite.js',
-    libraryTarget: 'umd',
+    libraryTarget: 'var',
   },
 };

@@ -1,5 +1,5 @@
 {
-  "name": "droplite",
+  "name": "react-droplite",
   "version": "0.0.1",
   "description": "Fat free  react drag and drop lists",
   "main": "dist/droplite.js",
