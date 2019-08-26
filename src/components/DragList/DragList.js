@@ -14,15 +14,15 @@ const DragList = (props) => {
     {
       if(target.id !== currentDraggableId) {
         if (currentDragOver && currentDragOver.classList && currentDragOver.id !== target.id) {
-          console.log('Remove drag over old item', currentDragOver.id)
+          // Remove .dragover on old item
           currentDragOver.classList.remove('draggedOver')
         } else {
-          console.log('Dragin over new item', target.id)
+          // Draggin over new item
           target.classList.add('draggedOver')
         }
       } else {
         if (currentDragOver && currentDragOver.classList && currentDragOver.id !== target.id) {
-          console.log('Remove drag over old item when initial does not move', currentDragOver.id)
+          // Remove .dragover on old item when initial does not move
           currentDragOver.classList.remove('draggedOver')
         }
       }
