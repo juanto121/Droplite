@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Draggable from '../Draggable/Draggable'
+import Draggable from '../Draggable/Draggable.js'
 
 const DragList = (props) => {
 
@@ -10,13 +10,22 @@ const DragList = (props) => {
   const dragOverHandler = (event) => {
     event.preventDefault()
     const target = event.target
-    if (target.id !== currentDraggableId &&
-      target.id !== LIST_CONTAINER_ID
-    )
+    if (target.id !== LIST_CONTAINER_ID)
     {
-      if(currentDragOver && currentDragOver.classList)
-        currentDragOver.classList.remove('draggedOver')
-      target.classList.add('draggedOver')
+      if(target.id !== currentDraggableId) {
+        if (currentDragOver && currentDragOver.classList && currentDragOver.id !== target.id) {
+          console.log('Remove drag over old item', currentDragOver.id)
+          currentDragOver.classList.remove('draggedOver')
+        } else {
+          console.log('Dragin over new item', target.id)
+          target.classList.add('draggedOver')
+        }
+      } else {
+        if (currentDragOver && currentDragOver.classList && currentDragOver.id !== target.id) {
+          console.log('Remove drag over old item when initial does not move', currentDragOver.id)
+          currentDragOver.classList.remove('draggedOver')
+        }
+      }
       setCurrentDragOver(target)
     }
   }
