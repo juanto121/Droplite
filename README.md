@@ -16,6 +16,8 @@ Install the package with ```npm install droplite```
 There are four basic requirements
 
 ```js
+import DragList from 'droplite'
+
 const MyComponent = (props) => {
   const [items, setItems] = useState(["A", "B", "C", "D"])
 
