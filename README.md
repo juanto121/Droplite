@@ -6,6 +6,8 @@
 
 Light react component to add drag and drop functionality to your lists.
 
+![](https://img.shields.io/bundlephobia/min/droplite)
+![](https://img.shields.io/npm/v/droplite)
 
 ### Usage
 
