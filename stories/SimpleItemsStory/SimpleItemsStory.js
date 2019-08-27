@@ -1,4 +1,4 @@
-import {DragList} from "../../src";
+import DragList from "../../src"
 import React, {useState} from "react";
 
 const SimpleItemsStory = (props) => {

@@ -30,7 +30,7 @@ const Draggable = (props) => {
     if(typeof(props.children.type) === 'string')
       modified = React.cloneElement(props.children, {
         ...makeDraggable,
-        className: [props.children.props.className, 'isDraggable'].join(" "),
+        className: [props.children.props.className, 'isDraggable'].join(" ")
       })
     else {
       modified = React.cloneElement(props.children, {
