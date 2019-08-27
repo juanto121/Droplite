@@ -1,6 +1,6 @@
 {
   "name": "droplite",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Fat free  react drag and drop lists",
   "main": "dist/droplite.js",
   "peerDependencies": {
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development",
+    "build": "webpack --mode production",
     "storybook": "start-storybook -p 9001",
     "build-storybook": "build-storybook -c .storybook -o ./docs/"
   },
